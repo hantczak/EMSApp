@@ -50,9 +50,15 @@ In current state of the app, all endpoints are accessible via HTTP requests on l
   `http://localhost:8090/topic/{messageBody}`
   
   NOTE: Same header as in case of queue is used. Its content is also randomized. Messages are automatically fetched by 2 listeners, listening for both messages with "IS_REDUNDANCY_ENABLED" set to true and false. Message contents are then printed out to the app console.
+  
+  <!-- CONFIGURATION -->
+## 🔧 Configuration
+One additional file has to be added to ensure proper working of the application. Name of the file is 'application.yml', and it has to be located under src/main/resources.
+It has to look the following way:
 
+![image](https://user-images.githubusercontent.com/74920949/131670428-bf89de38-4c60-49df-a4f4-1cf88b2fe1ef.png)
 
 <!-- STATUS -->
-## 🏗️ STATUS
+## 🏗️ Status
 In progress, app functionality could be further developped.
 
