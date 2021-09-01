@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '16'
+
+repositories {
+    mavenCentral()
+    maven{
+        url "http://repository.openmindonline.it/"
+        allowInsecureProtocol = true
+    }
+}
+
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-integration'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.integration:spring-integration-test'
+    // https://mvnrepository.com/artifact/tibco-ems/tibjms
+    implementation group: 'tibco-ems', name: 'tibjms', version: '4.1'
+    implementation 'org.springframework.boot:spring-boot-starter-activemq'
+}
+
+test {
+    useJUnitPlatform()
+}
